@@ -12,14 +12,11 @@ title: Beranda
 <div class="recipe-grid">
     {% for post in site.posts %}
     <a href="{{ post.url | relative_url }}" class="recipe-card">
-
-        <div class="card-image">
-            {% if post.image %}
-            <img src="{{ post.image | relative_url }}" alt="Gambar untuk {{ post.title }}">
-            {% else %}
-            <img src="https://i.imgur.com/gC5842V.jpg" alt="Gambar resep default">
-            {% endif %}
-        </div>
+        {% if post.image %}
+        <div class="card-image" style="background-image: url('{{ post.image | relative_url }}');"></div>
+        {% else %}
+        <div class="card-image" style="background-image: url('https://i.imgur.com/gC5842V.jpg');"></div>
+        {% endif %}
         <div class="card-content">
             <h3>{{ post.title }}</h3>
             <p>Oleh: {{ post.author }}</p>
