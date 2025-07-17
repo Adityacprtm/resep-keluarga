@@ -3,7 +3,7 @@
 # Ganti 'NAMA_USER/NAMA_REPOSITORI' dengan username dan nama repo Anda
 backend:
   name: github
-  repo: NAMA_USER/NAMA_REPOSITORI 
+  repo: adityacprtm/resep-keluarga
   branch: main # Atau 'master' jika itu branch utama Anda
 
 # Lokasi penyimpanan file media (gambar)
