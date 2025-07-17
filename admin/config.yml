@@ -1,26 +1,37 @@
-# admin/config.yml
-
-# Ganti 'NAMA_USER/NAMA_REPOSITORI' dengan username dan nama repo Anda
 backend:
   name: github
   repo: adityacprtm/resep-keluarga
-  branch: main # Atau 'master' jika itu branch utama Anda
+  branch: main
+  auth_type: pkce
+  app_id: Ov23ctkBGTHkPtAHLzjo
 
-# Lokasi penyimpanan file media (gambar)
-media_folder: "assets/images" # Path relatif dari root
-public_folder: "/assets/images" # Path yang akan digunakan di src gambar
+media_folder: "assets/images"
+public_folder: "/assets/images"
 
-# Definisikan koleksi konten (dalam kasus ini, hanya resep)
 collections:
-  - name: "posts" # Nama internal, harus 'posts' untuk Jekyll
-    label: "Resep" # Nama yang tampil di UI CMS
-    folder: "_posts" # Folder tempat menyimpan file
-    create: true # Izinkan membuat resep baru
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Format nama file otomatis
-    fields: # Mendefinisikan form input di CMS
+  - name: "posts"
+    label: "Resep"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "recipe" }
       - { label: "Judul Resep", name: "title", widget: "string" }
       - { label: "Penulis / Sumber", name: "author", widget: "string" }
-      - { label: "Gambar Utama", name: "image", widget: "image", required: false }
-      - { label: "Tags (pisahkan dengan koma)", name: "tags", widget: "string", required: false }
-      - { label: "Isi Resep (Bahan & Langkah)", name: "body", widget: "markdown" }
+      - {
+          label: "Gambar Utama",
+          name: "image",
+          widget: "image",
+          required: false,
+        }
+      - {
+          label: "Tags (pisahkan dengan koma)",
+          name: "tags",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Isi Resep (Bahan & Langkah)",
+          name: "body",
+          widget: "markdown",
+        }
