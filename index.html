@@ -2,16 +2,25 @@
 layout: default
 title: Beranda
 ---
-<div class="recipe-list">
-    <h2>Semua Resep</h2>
-    <ul>
-        {% for post in site.posts %}
-        <li>
-            <a href="{{ post.url | relative_url }}">
-                <h3>{{ post.title }}</h3>
-                <p>Oleh: {{ post.author }}</p>
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
+
+<div class="hero">
+    <h2>Selamat Datang di Dapur Kami 🍳</h2>
+    <p>Temukan koleksi resep favorit keluarga yang diwariskan dari generasi ke generasi.</p>
+</div>
+
+<h2 class="section-title">Telusuri Resep</h2>
+<div class="recipe-grid">
+    {% for post in site.posts %}
+    <a href="{{ post.url | relative_url }}" class="recipe-card">
+        {% if post.image %}
+        <div class="card-image" style="background-image: url('{{ post.image | relative_url }}');"></div>
+        {% else %}
+        <div class="card-image" style="background-image: url('https://i.imgur.com/gC5842V.jpg');"></div>
+        {% endif %}
+        <div class="card-content">
+            <h3>{{ post.title }}</h3>
+            <p>Oleh: {{ post.author }}</p>
+        </div>
+    </a>
+    {% endfor %}
 </div>
