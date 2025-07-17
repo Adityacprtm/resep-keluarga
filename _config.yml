@@ -1,0 +1,9 @@
+# _config.yml
+
+title: Buku Resep Keluarga
+description: Kumpulan resep masakan turun-temurun dari keluarga kami.
+baseurl: "/resep-keluarga"
+url: "https://adityacprtm.github.io"
+
+plugins:
+  - jekyll-seo-tag

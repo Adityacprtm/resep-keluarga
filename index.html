@@ -1,0 +1,17 @@
+---
+layout: default
+title: Beranda
+---
+<div class="recipe-list">
+    <h2>Semua Resep</h2>
+    <ul>
+        {% for post in site.posts %}
+        <li>
+            <a href="{{ post.url | relative_url }}">
+                <h3>{{ post.title }}</h3>
+                <p>Oleh: {{ post.author }}</p>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>

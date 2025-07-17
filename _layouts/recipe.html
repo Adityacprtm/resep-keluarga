@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<article class="recipe">
+    <h2>{{ page.title }}</h2>
+    <p class="meta">Oleh: {{ page.author }} | {% for tag in page.tags %}<span>#{{ tag }}</span> {% endfor %}</p>
+
+    {% if page.image %}
+    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="recipe-image">
+    {% endif %}
+
+    <div class="recipe-content">
+        {{ content }}
+    </div>
+
+    <a href="{{ '/' | relative_url }}" class="back-link">&larr; Kembali ke Daftar Resep</a>
+</article>

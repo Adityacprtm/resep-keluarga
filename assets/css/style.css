@@ -1,0 +1,120 @@
+/* assets/css/style.css */
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fdfdfd;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+header {
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+header h1 a {
+    text-decoration: none;
+    color: #333;
+}
+
+header p {
+    font-size: 1.1em;
+    color: #777;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-size: 0.9em;
+    color: #888;
+}
+
+footer a {
+    color: #555;
+}
+
+.recipe-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.recipe-list li {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: box-shadow 0.2s;
+}
+
+.recipe-list li:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.recipe-list li a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+.recipe-list h3 {
+    margin: 0 0 5px 0;
+    color: #d6336c;
+}
+
+.recipe-list p {
+    margin: 0;
+    color: #777;
+}
+
+.recipe h2 {
+    margin-top: 0;
+    color: #d6336c;
+}
+
+.recipe .meta {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.recipe .meta span {
+    background: #f1f3f5;
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 0.8em;
+    margin-right: 5px;
+}
+
+.recipe-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.recipe-content h3 {
+    border-bottom: 2px solid #d6336c;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+}
