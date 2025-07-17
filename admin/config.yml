@@ -2,8 +2,6 @@ backend:
   name: github
   repo: adityacprtm/resep-keluarga
   branch: main
-  auth_type: pkce
-  app_id: Ov23ctkBGTHkPtAHLzjo
 
 media_folder: "assets/images"
 public_folder: "/assets/images"
